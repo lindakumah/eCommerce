@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: montserrat;
+    width: 100%;
+  }
+  nav{
+    background: white;
+    height: 80px;
+    width: 100%;
+    z-index: 100%;
+    border-bottom: 1px solid rgb(128, 128, 128);
+    margin-bottom: 40px;
+    
+  }
+
+  img.hamburger-menu{
+      width: 30px;
+      height: 30px;
+      margin-top: 25px;
+  }
+
+ 
+
+  nav .nav-list{
+    float: right;
+    margin-right: 20px;
+  }
+  nav .nav-list .nav-list-item{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav .nav-list .nav-list-item a{
+    color: grey;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+
+  .nav-list-item a:hover{
+    background-color: #FAD24A;
+    transition: .5s;
+  }
+
+  .shopbtn{
+    font-size: 30px;
+    color: rgb(95, 95, 95);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+  .shopbtn a{
+      color: rgb(95, 95, 95);
+  }
+  .shopbtn a:hover{
+      background: none;
+}
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .checkout-btn:hover{
+    background:linear-gradient(to right, #f8d358, #fce28e);
+  }
+
+  #shop-cart{
+    position: relative;
+    font-size: 15px;
+    right: 10px;
+    background-color: whitesmoke;
+    border: 1px solid #FAD24A;
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+
+  #check{
+    display: none;
+  }
+
+  
+  @media (max-width: 952px){
+    
+    nav .nav-list .nav-list-item a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    .nav-list{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav .nav-list .nav-list-item{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav .nav-list .nav-list-item a{
+      font-size: 20px;
+    }
+    .nav-list-item a:hover{
+      background: none;
+      color: #FAD24A;
+    }
+    #check:checked ~ .nav-list{
+      left: 0;
+      z-index: 999;
+    }
+
+  }
+  section{
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+  }
+  

@@ -1,0 +1,207 @@
+.flex-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.grid-main{
+    display:grid;
+    grid-template-columns:3fr 1fr; 
+    gap: 1rem;
+}
+
+.grid-sub{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    gap: 1rem;
+    width: 60rem;
+}
+
+
+
+.grid-main-items{
+    padding-left: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+}
+
+img{
+    width:inherit;
+    height: inherit;
+}
+
+.sub-images:hover{
+    cursor: pointer;
+    border: 1px solid #FAD24A; 
+  
+}
+
+.sub{
+    width: 100%;
+    height: 100px;
+}
+
+.main{
+    width: 100%;
+    height: 700px;
+}
+
+/* Product Info Starts */
+
+.review{
+    margin-top: 20px;
+}
+
+#stars{
+    color: #FAD24A;
+    display: inline;
+}
+
+.item-name{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    
+}
+.border-item{
+    border: 2px solid #FAD24A;
+    width: 250px;
+    height: 70px;
+    text-align: center;
+    padding: 10px;
+}
+.border-item .color{
+    color: #FAD24A;
+    font-weight: bold;
+}
+.border-item .font{
+    font-size: 10px;
+}
+
+.item-colour{
+    font-weight:lighter;
+}
+
+.price::before{
+content: "GHC";
+}
+
+.price{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: lighter;
+    font-family: serif;
+    color: grey;
+}
+
+.item-size{
+    font-size: 25px;
+    color: #FAD24A;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid #FAD24A;
+   
+}
+.size{
+    font-size: 25px;
+    color: white;
+    padding: 5px;
+    background-color: #FAD24A;
+    border: 1px solid #FAD24A;
+}
+
+.item-size:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #FAD24A;
+}
+
+.item-size:focus{
+    color: white;
+    background-color: #FAD24A;
+}
+
+#colour,#size{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: grey;
+}
+
+hr{
+    width: 250px;
+    color: #FAD24A;
+}
+/* Product Info Ends */
+
+
+/* Counter Starts */
+
+.down, .up{
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    color: #FAD24A;
+    border: 1px solid #FAD24A;
+    background-color: white;
+    border-radius: 50%;
+
+}
+
+.down:hover, .up:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #FAD24A;
+
+}
+
+.quantity-field{
+    margin-top: 20px;    
+    margin-bottom: 20px; 
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid #FAD24A;
+    color: #FAD24A;
+}
+
+.quantity-field:focus{
+    outline: none;
+    border: 1px solid #FAD24A;
+}
+
+/* Counter Ends */
+
+/* Add button Starts */
+.add-btn{
+ width: 250px;
+ height: 50px;
+ color: white;
+ background-color: #FAD24A;
+ border: 1px solid #FAD24A;
+ font-size: 20px;
+}
+
+.add-btn:hover{
+    cursor: pointer;
+    background:linear-gradient(to right, #f8d358, #fce28e);
+}
+
+.add-btn:focus{
+    outline: none;
+}
+
+/* Add button Ends */
+
+
+
+@media screen and (max-width: 640px) {
+    .grid-main{
+        grid-template-columns:1fr;
+    }
+    
+    .grid-sub{
+        grid-template-rows: 1fr;
+    }
+
+  }

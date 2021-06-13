@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="scripts/checkout.js"></script>
+    <link rel="stylesheet" href="css/navigationBar.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <title>Document</title>
+    <link rel="icon" href="">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          
+            <img class="hamburger-menu" src="assets/menu.svg" alt="">
+        </label>
+        <label  class="shopbtn">
+           
+            <a href="cart.html">
+                <img  class="hamburger-menu" src="assets/cart.svg" alt="">
+                <span id="shop-cart"></span>
+            </a>
+        </label>
+        <ul class="nav-list">
+            <li class="nav-list-item"><a class="active" href="index.html">Home</a></li>
+            <li class="nav-list-item"><a href="#">About</a></li>
+            <li class="nav-list-item"><a href="#">Services</a></li>
+            <li class="nav-list-item"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Empty Cart Message -->
+    <div class="cart-empty" id="cart-empty-id">
+        <div>
+            <h2> Your shopping bag is empty.
+                
+             </h2>
+             <p>To add items to your bag, click the "Add to Bag" button from a product page.
+             </p>
+        </div>
+    </div>
+
+
+      <!-- Checkout Cart -->
+  <div class="flex-div" id="summaryProduct">
+    <div class="shopping-cart">
+      <div class="basket-module">
+        <label for="promo-code">Enter a promotional code</label>
+        <input id="promo-code" type="text" name="promo-code" maxlength="5" class="promo-code-field">
+        <button class="promo-code-cta">Apply</button>
+      </div>
+
+      <div class="basket" id="basket-product">
+        <div class="basket-labels">
+          <ul>
+            <li class="item item-heading">Item</li>
+            <li class="price">Price</li>
+            <li class="quantity">Quantity</li>
+            <li class="subtotal">Subtotal</li>
+          </ul>
+        </div>
+        <div class="basket-product">
+          <div class="item">
+            <div class="product-image">
+              <img src="assets/shirt.jpg" alt="Placholder Image 2" class="product-frame">
+            </div>
+            <div class="product-details">
+              <h1><span class="item-quantity"></span> x <span class="item-name"></span></h1>
+              <p class="bold"> <span class="item-colour"></span> <br> <br> Size: <span class="item-size"></span></p>
+            </div>
+          </div>
+          <div class="price" id="priceValue"></div>
+          <div class="quantity">
+              <p class="item-quantity"></p>
+          </div>
+          <div class="subtotal" id="product-subtotal"></div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="summary">
+          <div class="summary-total-items">
+          
+            <a href="cart.html">
+                <img  class="hamburger-menu" src="assets/cart.svg" alt="">
+                <span id="shop-cart" class="edit-cart"></span>
+            </a>
+          </div>
+          <div class="summary-subtotal">
+            <div class="subtotal-title">Subtotal</div>
+            <div class="subtotal-value final-value" id="basket-subtotal"></div>
+            <div class="summary-promo hide">
+              <div class="promo-title">Promotion</div>
+              <div class="promo-value final-value" id="basket-promo"></div>
+            </div>
+          </div>
+          <div class="summary-total">
+            <div class="total-title">Total</div>
+            <div class="total-value final-value" id="basket-total"></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Shipping Details -->
+
+  <div class="shipping-flex-div">
+      <div class="shipping-grid">
+          <div class="shipping-address">
+              <h2>Shipping Address</h2>
+              <a href="#"> Shipping to an APO/FPO/DPO address? </a>
+              <div>
+                      <input type="text" class="small-text" id="firstName" placeholder="FIRST NAME">
+                      <input type="text" class="small-text" id="lastName" placeholder="LAST NAME">
+              </div>
+
+              <div>
+                  <input type="text" class="long-text" id="address" placeholder="ADDRESS"> <br>
+              </div>
+
+              <div>
+                <input type="text" class="long-text" id="gps" placeholder="GPS ADDRESS"> <br>
+            </div>
+
+              <div>
+                  <input type="text" class="long-text" id="city" placeholder="CITY">
+              </div>
+
+              <div>
+                  <span>
+                      <input type="text" class="small-text" id="state" placeholder="STATE">
+                      <input type="text" class="small-text" id="zipCode" placeholder="ZIP CODE">
+                  </span>
+              </div>
+              
+              <div>
+                  <input type="text" class="small-text" id="phone" placeholder="PHONE">
+              </div>
+              <a href="#"> We do not share or sell your personal info. Privacy Policy </a>
+
+              <h2>Order Status Recipient</h2>
+              <h4>Where do we send order status updates?</h4>
+              <div>
+                  <input type="text" class="long-text" id="email" placeholder="EMAIL">
+              </div>
+
+              <a href="#"> We do not share or sell your personal info. Privacy Policy </a>
+          </div>
+
+          <div class="shipping-options">
+              <h2>Shipping Options</h2>
+              <div class="container">
+                  <ul>
+                      <li>
+                          <input type="radio" id="option_one" class="options-radio" name="selector">
+                          <label for="option_one" class="options-label"> Standard Ground: 8.50 </label>
+                          <p class="options-subText">Usually arrives within 2-7 business days. Delivery excludes Saturday, Sunday and Holidays.</p>
+                      </li>
+                      <li>
+                          <input type="radio" id="option_two" name="selector">
+                          <label for="option_two" class="options-label"> UPS 2nd Day Air: 18.50</label>
+                          <p class="options-subText"> Please note that our shipping carriers are experiencing Covid-related delays. </p>
+                      </li>
+                      <li>
+                          <input type="radio" id="option_three" name="selector">
+                          <label for="option_three" class="options-label"> Next Day Air: 26.50 </label>
+                          <p class="options-subText"> Please note that our shipping carriers are experiencing Covid-related delays. </p>
+                      </li>
+                      <li>
+                        <input type="radio" id="option_four" name="selector">
+                        <label for="option_three" class="options-label"> Same Day Delivery: 12.95 </label>
+                        <p class="options-subText">Order by 3pm (2pm on Sundays), get it the same day otherwise we will deliver next day. Available for qualifying items in select areas. Enter your shipping address and then select Same Day Delivery to confirm eligibility. If any items are elgible, they will appear at the top of this page.</p>
+                    </li>
+                  </ul>
+                </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="summary-checkout">
+    <input type="submit" value="Payment" id="payment-cta">
+  </div>
+
+</body>
+</html>

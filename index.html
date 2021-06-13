@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="scripts/index.js"></script>
+    <link rel="stylesheet" href="css/navigationBar.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/slideCart.css">
+    <title>Document</title>
+    <link rel="icon" href="">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+           
+            <img class="hamburger-menu" src="assets/menu.svg" alt="">
+        </label>
+        <label  class="shopbtn">
+           
+            <a href="cart.html">
+                <img  class="hamburger-menu" src="assets/cart.svg" alt="">
+                <span id="shop-cart">0</span>
+            </a>
+        </label>
+        
+        <ul class="nav-list">
+            <li class="nav-list-item"><a class="active" href="index.html">Home</a></li>
+            <li class="nav-list-item"><a href="#">About</a></li>
+            <li class="nav-list-item"><a href="#">Services</a></li>
+            <li class="nav-list-item"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+	<div id="cd-shadow-layer"></div>
+
+    <!-- Sliding Cart -->
+	<div id="cd-cart">
+		<h2>Cart</h2>
+		<ul class="cd-cart-items" id="cd-cart-itemsId">
+			<li>
+				<span class="cd-qty"></span> <span class="item-name"></span>
+				<div class="cd-price"></div>
+				<a href="#0" class="cd-item-remove cd-img-replace"><img src="assets/trash-bin.svg" alt=""></a>
+			</li>
+		</ul> 
+
+		<div class="cd-cart-total">
+			<p>Total <span class="slide-total"></span></p>
+		</div> 
+
+		<a href="checkout.html" class="checkout-btn">Checkout</a>
+		
+		<p class="cd-go-to-cart"><a href="cart.html">Go to cart page</a></p>
+	</div>
+
+    <div class="flex-div">
+        <div class="grid-main">
+            <div class="grid-sub grid-main-items">
+                <!-- Contains three images -->
+
+                <div class="flex-div">
+                    <div class="grid-sub-items sub" id="product-three-images">
+                        <img class="sub-images" src="assets/shirt.jpg" alt="" id="sub-image-1">
+                        <img class="sub-images" src="assets/shorts.jpg" alt="" id="sub-image-2">
+                        <img class="sub-images" src="assets/trouser.jpg" alt="" id="sub-image-3">
+                    </div>
+                </div>
+                <div class="flex-div">
+                    <div class="grid-sub-items main" id="product-main-image">
+                        <img class="main-images" src="assets/shirt.jpg" alt="" id="main-image">
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="grid-main-items" id="product-info">
+                <!-- Contains information about the product-->
+                <div class="flex-div">
+                    <div>
+                        <div class="review">
+                            <p id="stars">★★★★☆ </p><span>Reviews</span>
+                        </div>
+                        <h2 class="item-name">Shirt Goomy </h2>
+                        <h3>
+                            <p id="colour">Colour:  <span class="item-colour">Navy</span></p>
+                            <p id="size">Size: L</p>
+                        </h3>
+                        <span class="item-size">S</span>
+                        <span class="item-size">M</span>
+                        <span class="item-size">L</span><br><br>
+                        <!-- <span class="item-size size">L</span> -->
+                        <div class="sep">
+                            <span class="item-size large size">XL</span>
+                        </div><br>
+                        <h3 class="price"> 287.99 </h3>
+                        <hr><br><br>
+
+                        <div class="counter">
+                            <span class="down">-</span>
+                            <input id="item-count" type="text" class="quantity-field" value="1" max="10">
+                            <span class="up">+</span>
+                        </div><br><br>
+
+                        <input id="cd-cart-trigger" class="add-btn" type="submit" value="ADD TO BAG"><br><br>
+                        
+                        <p class="border-item">
+                           <span class="color">Buy online, free in-store pickup</span><br>
+                           <span class="font">
+                               Get it today at the shop near you.
+                            <a href="">choose store</a> 
+                           </span>
+                        </p><br>
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="scripts/slideCart.js"></script>
+</body>
+
+</html>
